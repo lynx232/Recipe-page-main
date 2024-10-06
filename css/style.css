@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*BACKGROUND COLORS*/
+    --BODY-BGCOLOR: hsl(30, 54%, 90%);
+    --CARD-BGCOLOR: hsl(0, 0%, 100%);
+    --PREPBOX-BGCOLOR: hsl(330, 100%, 98%);
+
+    /*FONT COLORS*/
+    --ALTTEXT-FCOLOR: hsl(14, 45%, 36%);
+    --TITLE-FCOLOR: hsl(24, 5%, 18%);
+    --MAINTEXT-FCOLOR: hsl(30, 10%, 34%);
+    --PREPBOX-FCOLOR: hsl(332, 51%, 32%);
+
+    /*FONT FAMILY*/
+    --FONT-MAIN: 'Young Serif';
+    --FONT-ALT: 'Outfit'
+}
+
+.page {
+    background-color: var(--BODY-BGCOLOR);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+/*|| PRESENTATION || */
+
+.card {
+    background-color: var(--CARD-BGCOLOR);
+    min-width: 375px;
+    max-width: 375px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.product__image {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.product__title {
+    font-family: var(--FONT-MAIN);
+    color: var(--TITLE-FCOLOR);
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1em;
+    margin: 0 0.7em 0.5em 0.7em;
+}
+
+.product__description {
+    font-family: var(--FONT-ALT);
+    color: hsl(30, 10%, 34%);
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0 1em 2em 1.5em;
+}
+
+/*|| PREPARATION || */
+
+.preparation {
+    background-color: var(--PREPBOX-BGCOLOR);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: 1.5em;
+    font-family: var(--FONT-ALT);
+}
+
+.preparation__title {
+    color: var(--PREPBOX-FCOLOR);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+}
+
+.preparation__time {
+    color: var(--MAINTEXT-FCOLOR);
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    list-style-position: inside;
+    list-style: none;
+}
+
+.preparation__time li {
+    padding-left: 2em;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.preparation__time li::before {
+    color: var(--PREPBOX-FCOLOR);
+    font-size: 1.2em;
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: -0.1em;
+}
+
+.preparation__time li span {
+    color: var(--ALTTEXT-FCOLOR);
+    font-weight: 400;
+}
+
+/*|| INGREDIENTS || */
+
+.ingredients {
+    margin: 1.5em;
+    padding: 0 1em 1em 0.5em;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.ingredients__title {
+    color: var(--ALTTEXT-FCOLOR);
+    font-family: var(--FONT-MAIN);
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+
+.ingredients__total {
+    color: var(--MAINTEXT-FCOLOR);
+    font-family: var(--FONT-ALT);
+    font-size: 0.9em;
+    padding-left: 0.5em;
+    list-style-position: inside;
+    list-style: none;
+}
+
+.ingredients__total li {
+    padding-left: 2em;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.ingredients__total li::before {
+    color: var(--ALTTEXT-FCOLOR);
+    font-size: 1.5em;
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: -0.1em;
+}
+
+/*|| INSTRUCTIONS || */
+
+.instructions {
+    margin: 1.5em;
+    padding: 0 1em 1em 0.5em;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.instructions__title {
+    color: var(--ALTTEXT-FCOLOR);
+    font-family: var(--FONT-MAIN);
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+
+.instructions__list {
+    color: var(--MAINTEXT-FCOLOR);
+    font-family: var(--FONT-ALT);
+    font-size: 0.9em;
+    padding-left: 1.5em;
+    font-weight: 700;
+}
+
+.instructions__list li {
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+}
+
+.instructions__list li:before {
+    font-weight: 700;
+    color: var(--ALTEXT-FCOLOR);
+}
+
+.instructions__list li span {
+    color: var(--MAINTEXT-FCOLOR);
+    font-weight: 400;
+}
+
+ol li::marker {
+    color: var(--ALTTEXT-FCOLOR);
+}
+
+/*|| NUTRITION || */
+
+.nutrition {
+    padding: 0 0 1em 0.5em;
+    margin: 1.5em;
+}
+
+.nutrition__title {
+    color: var(--ALTTEXT-FCOLOR);
+    font-family: var(--FONT-MAIN);
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+
+.nutrition__description {
+    color: var(--MAINTEXT-FCOLOR);
+    font-family: var(--FONT-ALT);
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.nutrition__values {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition__values td {
+    color: var(--MAINTEXT-FCOLOR);
+    font-family: var(--FONT-ALT);
+    font-size: 0.9em;
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition__values td:first-child {
+    padding-left: 2em;
+}
+
+.nutrition__values td:last-child {
+    color: var(--ALTTEXT-FCOLOR);
+    font-weight: 700;
+    padding-right: 2em;
+    text-align: left;
+    
+
+}
+
+/*|| FOOTER || */
+
+.attribution {
+    color: var(--TITLE-FCOLOR);
+    font-family: var(--FONT-ALT);
+    font-size: 0.9em;
+    text-align: center;
+    white-space: break-spaces;
+}
+
+.attribution a:link {
+    color: hsl(218, 50%, 38%);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.attribution a:visited {
+    color: var(--PREPBOX-FCOLOR);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        background-color: var(--CARD-BGCOLOR);
+        border-radius: 15px;
+        min-width: 500px;
+        padding: 1.5em;
+        margin: 8em 0 1em 0;
+        
+    }
+
+    .product__image {
+        border-radius: 10px; 
+        margin-bottom: 1.5em;
+    }
+
+    .product__title {
+        margin: 0 0 0.5em 0;
+        font-size: 1.7em;
+    }
+
+    .product__description {
+        margin: 0 0 2em 0;
+        font-size: 0.7em;
+    }
+
+    .preparation {
+        margin: 0 0 1em 0; 
+    }
+
+    .preparation__title {
+        font-size: 0.9em;
+    }
+    
+    .preparation__time {
+        font-size: 0.7em;
+    }
+
+    .ingredients {
+        margin: 0 0 1em 0; 
+    }
+
+    .ingredients__title {
+        font-size: 1.2em;
+    }
+    
+    .ingredients__total {
+        font-size: 0.7em;
+    }
+
+    .instructions {
+        margin: 0 0 1em 0;
+    }
+    
+    .instructions__title {
+        font-size: 1.2em;
+    }
+    
+    .instructions__list {
+        font-size: 0.7em;
+    }
+
+    .nutrition {
+        margin: 0 0 1em 0;
+    }
+
+    .nutrition__title {
+        font-size: 1.2em;
+    }
+
+    .nutrition__description {
+        font-size: 0.7em;
+    }
+
+    .nutrition__values td {
+        font-size: 0.7em;
+    }
+
+    .attribution{
+        font-size: 0.7em;
+    }
+}
+
